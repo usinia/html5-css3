@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Web Tutorial" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="inkwon" />
+    <title>웹 프로그래밍 기초</title>
+    <style>
+      /* 인터널 방식 속성 적용 */
+      h1 {
+        color: red;
+      }
+    </style>
+    <!-- 익스터널 방식 속성 적용 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><img src="logo.png" alt="이미지 설명" /></h1>
+      <nav>
+        <ul>
+          <li><a href="#">메뉴 1</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <p>웹 사이트의 <mark>본문 내용 전체</mark>를 감쌀 때 사용</p>
+      <p>IE 호환을 위해 role='main' 속성값을 사용한다.</p>
+      <section>
+        <input type="text" value="이름" />
+        <input type="submit" value="제출" />
+        <p>당신의 취미는 무엇입니까?</p>
+        <input type="checkbox" />영화감상 <input type="checkbox" />사진
+        <input type="checkbox" />운동
+      </section>
+      <section>
+        <h2>웹 사이트 영역 설정할 때 사용</h2>
+        <p>h1~6이 반드시 포함되어야 한다.</p>
+        <aside><p>페이지 주요 내용과 연관성 적은 내용</p></aside>
+        <article>
+          <h3>페이지와 연관성 큰 내용</h3>
+          <p>h1~6이 만드시 포함되어야 한다.</p>
+        </article>
+      </section>
+      <section>
+        <!-- 인라인 방식 CSS 속성 적용 -->
+        <h1 style="background-color: yellow;">Hello World</h1>
+        <h1>type 선택자</h1>
+        <h2 id="bg color">
+          <!-- id는 속성값을 한 개만 사용할 수 있기 때문에 class처럼 복수의 속성을 적용할 수 없다. -->
+          id 선택자
+        </h2>
+        <h3 class="size color">class 선택자</h3>
+      </section>
+    </main>
+    <footer>
+      <p>회사 정보 등을 입력할 때 사용</p>
+    </footer>
+  </body>
+</html>
