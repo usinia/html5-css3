@@ -1,0 +1,41 @@
+header {
+  color: red;
+}
+
+header h1 {
+  color: blue;
+}
+
+header p {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+/* 나중에 적용된 CSS 속성값의 우선순위가 높음 */
+p {
+  color: blue;
+}
+
+/* 선택자를 구체적으로 작성할수록 우선순위가 높음 */
+section h2 {
+  color: blue;
+}
+
+h2 {
+  color: red;
+}
+
+.color {
+  color: red;
+}
+
+h3 {
+  color: blue;
+}
+
+#color {
+  color: green;
+}

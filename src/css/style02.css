@@ -1,0 +1,26 @@
+.place {
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+
+.font {
+  font-size: 50px;
+  font-family: Arial, Times, sans-serif;
+  /* font-style: normal; */
+  font-style: italic;
+  /* font-style: oblique; */ /* 비스듬한 글꼴 */
+  font-weight: bold;
+}
+
+.background {
+  width: 500px;
+  height: 500px;
+  /* background-color: yellow;
+  background-image: url(rice.jpeg);
+  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position: 40px 100px; */
+  background: yellow url(rice.jpeg) no-repeat left;
+}
