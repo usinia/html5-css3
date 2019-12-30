@@ -126,4 +126,67 @@ img와 background-image의 차이
 
 margin-top과 margin-bottom 속성이 제대로 적용되지 않을 때는 마진 병합(collapsing margins) 때문이다. 마진 병합이란 인접한 공간에 두 속성을 적용할 경우 두 속성 중 큰 속성값이 작은 속성값을 병합하는 현상을 말한다.
 
+### DAY 08. 레이아웃에 영향을 미치는 요소 2
+
+#### display 속성
+
+- inline - 줄바꿈이 일어나지 않음. width, height, margin이 적용되지 않음.
+- block - 줄바꿈이 일어남. width, height, margin이 적용됨
+- inline-block - 줄바꿈은 일어나지 않지만 width, height, margin이 적용됨.
+
+#### position 속성 - 2차원과 3차원이 존재
+
+##### 2차원 static
+
+static 속성값은 부모-자식 간에 발생하는 마진 병합 현상이 일어나고, top, left, right, bottom 속성이 적용되지 않고, 자식의 높이가 부모에 영향을 준다. position의 기본값이다.
+
+```css
+#position_static_parent {
+  width: 500px;
+  /* static 속성값은 부모의 높이에 영향을 줄 수 있다. */
+  /* height: 500px; */
+  background-color: yellow;
+}
+#position_static_child {
+  position: static;
+  /* static 속성과 margin-top 속성을 함께 사용하면 마진 병합 현상이 일어난다.
+  => 부모가 자식과 함께 margin-top 적용됨 */
+  margin-top: 100px;
+  /* static과 top 속성은 함께 사용할 수 없다. */
+  top: 100px;
+}
+```
+
+##### 3차원 fixed
+
+fixed 속성값은 부모-자식 간에 발생하는 마진 병합 현상이 일어나지 않고, top, right, bottom, left 속성이 적용되고, 부모가 자식 높이에 영향을 받지 않는다.
+
+fixe에서는 margin-top은 요소가 최초로 생성된 지점을 기준으로 하고, top은 웹 브라우저를 기준으로 하기 때문에 위치가 다르다.
+
+##### 2차원과 3차원 relative
+
+relative 속성값은 2차원과 3차원의 특징을 모두 갖는다. 부모-자식 간에 발생하는 마진 병합 현상이 일어나고, top, right, bottom, left 속성이 적용되며, 부모가 자식 높이에 영향을 받는다. margin-top 속성을 사용하면 static처럼 마진 병합 현상이 일어난다.
+
+##### 3차원 absolute
+
+absolute 속성값은 부모-자식 간에 마진 병합 현상이 일어나지 않고, top, right, bottom, left 속성이 적용되며 부모의 position에 따라 좌표 기준점이 달라진다. 부모가 자식 높이에 영향을 받지 않는다.
+
+부모의 position이 relative이면 margin-top과 top의 기준점이 부모에서 시작하는 처음 위치로 동일하며, static일 경우 top은 웹 브라우저를 기준으로 한다.
+
+### DAY 09. 레이아웃에 영향을 미치는 요소 3
+
+#### z-index
+
+z축은 레이어 높낮이에 영향을 준다. z-index로 사용하며 position이 fixed, relative, absolute 속성값인 3차원 요소와 함께 사용할 수 있다. 정수로 표현하며 숫자가 높을수록 상위 레이어로 표현된다.
+
+#### float
+
+선택된 태그를 띄워서 부모의 공간을 기준으로 왼쪽 끝이나 오른쪽 끝에 배치할 때 사용한다. `float: left;` 나 `float: right;`로 사용한다.
+
+2차원 > 3차원 형제일 경우는 두 요소 모두 출력되지만, 3차원 > 2차원 형제일 경우 요소가 겹쳐서 첫 번째 요소만 노출된다. float도 마찬가지다.
+
+#### float과 clear
+
+clear 속성은 float 속성의 기능을 제어하는 데 사용한다. 속성값은 left, right, both 등이 있다. 즉 left를 삭제, right를 삭제, 둘 다 삭제한다는 의미이며 일반적으로 `clear: both;`를 사용한다.
+
 ## 4. 만들어보자! 키즈가오 웹 사이트
