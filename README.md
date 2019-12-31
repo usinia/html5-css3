@@ -189,4 +189,18 @@ z축은 레이어 높낮이에 영향을 준다. z-index로 사용하며 positio
 
 clear 속성은 float 속성의 기능을 제어하는 데 사용한다. 속성값은 left, right, both 등이 있다. 즉 left를 삭제, right를 삭제, 둘 다 삭제한다는 의미이며 일반적으로 `clear: both;`를 사용한다.
 
+### DAY 10. CSS3에 등장한 신조어
+
+#### transform
+
+태그의 각도를 조정하고 크기를 변경하며 위치를 옮길 때 사용하는 속성으로 속성값으로 rotate, scale, skew, translate 등이 있다.
+
+`transform: rotate(45deg)`로 사용하며 양수는 시계방향, 음수는 반시계방향으로 회전한다.
+
+`transform: scale(1.5, 0.5)`로 사용하며 너비, 높이의 비율이 변경된다. 1을 기준으로 크면 확대, 작으면 축소한다.
+
+`transform: skew(10deg, 20deg)`로 사용하며, 각도를 입체적으로 조정할 때 사용한다. 양수면 오른쪽/아래, 음수면 왼쪽/위쪽으로 공간이 왜곡된다.
+
+`transform: translate(100px, 200px)`로 사용하며, 요소의 위치를 이동시킬 때 사용한다.
+
 ## 4. 만들어보자! 키즈가오 웹 사이트
