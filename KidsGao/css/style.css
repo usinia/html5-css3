@@ -1,0 +1,124 @@
+/* Default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 브라우저x축을 벗어나는 모든 요소를 감추기 위해 overflow-x: hidden을 적용. 가로 스크롤이 생기지 않고 숨겨진다. */
+body {
+  overflow-x: hidden;
+}
+
+/* h1~h6, p 태그 안에 있는 margin과 padding 속성을 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* button 태그의 css 속성 초기화 */
+button {
+  border: none;
+  background-color: transparent; /* 배경색을 투명하게 */
+}
+
+/* intro */
+#intro {
+  width: 100%;
+  height: 1600px;
+  background-image: url(../img/intro/intro_bg.jpg);
+  /* padding-top: 100px; */
+}
+
+#intro .introWrap {
+  position: relative; /* 2차원과 3차원 특징 */
+  width: 616px;
+  height: 323px;
+  background-color: yellow;
+  /* left와 margin-left 속성을 활용한 중앙 정렬 공식 */
+  left: 50%;
+  margin-left: -308px;
+  top: 100px;
+}
+
+#intro .introWrap .logo {
+  position: absolute; /* 로고를 3차원 특징으로 변경 */
+  width: 616px;
+  height: 323px;
+  background-image: url(../img/intro/logo.png);
+  z-index: 100;
+}
+
+#intro .introWrap .lion {
+  position: absolute; /* 사자를 3차원 특징으로 변경 */
+  width: 290px;
+  height: 290px;
+  background-image: url(../img/intro/lion.png);
+  margin: 10px 0 0 -120px;
+}
+
+#intro .introWrap .rabbit {
+  position: absolute;
+  width: 119px;
+  height: 171px;
+  background-image: url(../img/intro/rabbit.png);
+  margin: 5px 0 0 550px;
+}
+
+#intro .introWrap .bear {
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  background-image: url(../img/intro/bear.png);
+  margin: 200px 0 0 500px;
+  z-index: 200;
+}
+
+#intro .introWrap .monkey {
+  position: absolute;
+  width: 172px;
+  height: 172px;
+  background-image: url(../img/intro/monkey.png);
+  margin: 230px 0 0 10px;
+  z-index: 200;
+}
+
+#intro .cloudWrap {
+  position: relative;
+  width: 100%;
+  height: 1050px;
+  /* background-color: pink; */
+}
+
+#intro .cloudWrap .leftCloud {
+  position: absolute;
+  width: 1024px;
+  height: 576px;
+  background-image: url(../img/intro/cloud1.png);
+  left: 0; /* cloudWrap 서랍장을 기준으로 왼쪽 끝에 배치 */
+  z-index: 1;
+}
+
+#intro .cloudWrap .rightCloud {
+  position: absolute;
+  width: 1024px;
+  height: 576px;
+  background-image: url(../img/intro/cloud2.png);
+  right: 0; /* cloudWrap 서랍장을 기준으로 오른쪽 끝에 배치 */
+  z-index: 2;
+}
+
+#intro .cloudWrap .dragonfly {
+  position: absolute;
+  width: 431px;
+  height: 371px;
+  background-image: url(../img/intro/dragonfly.png);
+  top: 600px; /* cloudWrap 기준으로 상단에서 떨어진 지점 */
+  transform: rotate(65deg);
+}
