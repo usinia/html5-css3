@@ -1,0 +1,20 @@
+ul {
+  /* li 앞에 • 삭제 */
+  list-style: none;
+}
+
+a {
+  /* 링크밑줄 삭제 */
+  text-decoration: none;
+}
+
+li {
+  float: left; /* li 사이의 공백 제거 */
+  /* display: inline-block; */
+  width: 100px;
+  height: 50px;
+  background-color: yellow;
+  border: solid 5px red;
+  text-align: center;
+  line-height: 50px; /* 텍스트 중앙 정렬-height 속성과 동일한 속성값 */
+}

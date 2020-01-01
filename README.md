@@ -203,4 +203,91 @@ clear 속성은 float 속성의 기능을 제어하는 데 사용한다. 속성�
 
 `transform: translate(100px, 200px)`로 사용하며, 요소의 위치를 이동시킬 때 사용한다.
 
+#### transition
+
+마우스 포인터를 올리는 등 특정 조건에 따라 상태가 변하는 것을 뜻한다.
+
+```css
+#transition {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+
+  /* 변화 과정을 보여 주고자 하는 속성은 width이다. */
+  transition-property: width;
+
+  /* width 300px에서 width 600px로 바뀌는 데 걸리는 시간은 3초다. */
+  transition-duration: 3s;
+
+  /* 초반은 느리게, 중반은 빠르게, 종반은 느리게 변화가 진행된다. */
+  transition-timing-function: ease;
+
+  /* 마우스 포인터를 올렸을 때 1초 후에 변화가 시작된다. */
+  transition-delay: 1s;
+
+  /* 한 줄로 */
+  /* transition: width 3s ease 1s; */
+}
+
+/* #transition에 마우스 포인터를 올렸을 때 width 속성값이 600px로 변한다. */
+#transition:hover {
+  width: 600px;
+}
+```
+
+#### animation
+
+GIF나 플래시처럼 웹 사이트에 다양한 애니메이션 효과를 적용할 때 사용한다. @keyframes 가 짝으로 존재한다.
+
+```css
+#animation {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  /* 애니메이션 이름 */
+  animation-name: changeWidth;
+  /* 애니메이션이 from~to로 동작하는 데 걸리는 시간 */
+  animation-duration: 3s;
+  /* 애니메이션 재생 횟수. from-to가 1회로 왕복은 2회이다. */
+  animation-iteration-count: 6;
+  /* 속도의 가속과 감속 설정 */
+  animation-timing-function: ease;
+  /* 애니메이션 진행 방향. normal: from~to, reverse: to~from, alternate: from~to&to~from, alternate-reverse: to~from&form~to */
+  animation-direction: alternate;
+  /* 애니메이션 동작 시간 지연, 기본값 0s */
+  animation-delay: 2s;
+
+  /* 한 줄로 */
+  animation: changeWidth 3s 6 ease alternate 2s;
+}
+
+/* @keyframes 옆에는 animation-name 속성의 속성값을 입력한다. */
+@keyframes changeWidth {
+  from {
+    width: 300px;
+  }
+  to {
+    width: 600px;
+  }
+  /* 혹은 */
+  0% {
+    width: 300px;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    width: 600px;
+  }
+}
+```
+
+#### 신조어와 브라우저 호환성 접두사
+
+신조어는 이전 버전의 브라우저에서는 지원하지 않는다. 호환성을 위해 각 브라우저는 접두사를 붙인 속성을 지원하는데, -ms-, -webkit-, -moz-, -o- 등이 있다. 모든 신조어를 지원하는 것은 아니다. 접두사를 먼저, 이후에 신조어를 작성하는데 이는 css의 우선순위가 나중에 작성한 속성에 있기 때문이다.
+
+### DAY 11. 메뉴 버튼 만들기
+
+index03.html, style03.css
+
 ## 4. 만들어보자! 키즈가오 웹 사이트
